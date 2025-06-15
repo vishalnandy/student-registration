@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Register Student</h1>
+    <form method="POST" action="/register">
+        <input type="text" name="name" placeholder="Name" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="number" name="age" placeholder="Age" required><br>
+        <button type="submit">Register</button>
+    </form>
+    <h2>Registered Students:</h2>
+    <ul>
+        {% for student in students %}
+        <li>{{ student.name }} - {{ student.email }} - {{ student.age }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
