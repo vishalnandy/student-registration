@@ -3,7 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Vishal1nand@@db.tvlobiffdkivwwpyolwi.supabase.co:5432/postgres'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///students.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Vishal1nand@@db.vishalnandi99@gmail.com.supabase.co:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres.tvlobiffdkivwwpyolwi:Vishal1nand%40@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?sslmode=require'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
